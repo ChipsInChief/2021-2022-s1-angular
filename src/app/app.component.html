@@ -9,5 +9,7 @@
       </ul>
     </div>
   </div>
-  <button class="btn btn-success" [disabled]="!isAuth">Tout allumer</button>
+  <button class="btn btn-success" 
+          [disabled]="!isAuth"
+          (click)="onAllumer()">Tout allumer</button>
 </div>
