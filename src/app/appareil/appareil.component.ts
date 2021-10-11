@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppareilComponent implements OnInit {
 
   appareilName: string ='Blender';
-  
+  appareilStatus: string = 'éteint';
+
   constructor() { }
 
   ngOnInit(): void {
