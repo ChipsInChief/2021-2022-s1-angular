@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppareilComponent implements OnInit {
 
+  appareilName: string ='Blender';
+  
   constructor() { }
 
   ngOnInit(): void {
