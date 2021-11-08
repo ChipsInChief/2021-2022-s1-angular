@@ -12,6 +12,10 @@ export class AppComponent {
   appareilTwo: string = 'Télévision';
   appareilThree: string = 'Frigo';
 
+  statutApp1: string = 'éteint';
+  statutApp2: string = 'allumé';
+  statutApp3: string = 'éteint';
+
   constructor() {
     setTimeout(
       () => { this.isAuth = true; },
