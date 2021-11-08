@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isAuth = false;
+  lastUpdate = new Date();
 
   appareils = [
     {
