@@ -7,7 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isAuth = false;
-  lastUpdate = new Date();
+  lastUpdate:Promise<Date> = new Promise((resolve, reject) => {
+    const date = new Date();
+    setTimeout(
+      () => {
+        resolve(date);
+      }, 2000
+    );
+  });
 
   appareils = [
     {
@@ -17,7 +24,7 @@ export class AppComponent {
       name: 'Four', status: 'allumé'
     },
     {
-      name: 'Ordinateur', status: 'éteint'
+      name: 'Ordinateur', status: 'éteint'  
     }
   ]
 
