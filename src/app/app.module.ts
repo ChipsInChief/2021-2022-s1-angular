@@ -1,5 +1,6 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppareilService } from './services/appareil.service'
 
 import { AppComponent } from './app.component';
 import { MonPremierComponent } from './mon-premier/mon-premier.component';
@@ -22,7 +23,8 @@ registerLocaleData(localeFr);
     FormsModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: "fr"}
+    { provide: LOCALE_ID, useValue: "fr"},
+    AppareilService
   ],
   bootstrap: [AppComponent]
 })
