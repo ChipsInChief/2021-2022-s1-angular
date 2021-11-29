@@ -12,7 +12,14 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { AuthComponent } from './auth/auth.component';
 import { AppareilViewComponent } from './appareil-view/appareil-view.component';
+import { RouterModule, Routes } from '@angular/router';
 registerLocaleData(localeFr);
+
+const appRoutes: Routes = [
+  { path: 'appareils', component: AppareilViewComponent },
+  { path: 'auth', component: AuthComponent },
+  { path: '', component: AppareilViewComponent }
+]
 
 @NgModule({
   declarations: [
@@ -24,10 +31,11 @@ registerLocaleData(localeFr);
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: "fr"},
+    { provide: LOCALE_ID, useValue: "fr" },
     AppareilService
   ],
   bootstrap: [AppComponent]
