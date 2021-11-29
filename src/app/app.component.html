@@ -4,9 +4,10 @@
       <h2>Mes appareils</h2>
       <p>Mis à jour le {{ lastUpdate | async | date : 'EEEE d MMMM y' | uppercase }}</p>
       <ul class="list-group">
-        <app-appareil *ngFor="let appareil of appareils"
+        <app-appareil *ngFor="let appareil of appareils; let i = index"
                       [appareilName]="appareil.name"
-                      [appareilStatus]="appareil.status"></app-appareil>
+                      [appareilStatus]="appareil.status"
+                      [idAppareil]="i"></app-appareil>
       </ul>
     </div>
   </div>
