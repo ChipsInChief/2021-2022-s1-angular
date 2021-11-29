@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { AuthComponent } from './auth/auth.component';
+import { AppareilViewComponent } from './appareil-view/appareil-view.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -18,7 +19,8 @@ registerLocaleData(localeFr);
     AppComponent,
     MonPremierComponent,
     AppareilComponent,
-    AuthComponent
+    AuthComponent,
+    AppareilViewComponent
   ],
   imports: [
     BrowserModule,
