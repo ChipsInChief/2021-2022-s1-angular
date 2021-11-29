@@ -10,13 +10,15 @@ import { FormsModule } from '@angular/forms';
 // Ajout de la localisation "fr"
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { AuthComponent } from './auth/auth.component';
 registerLocaleData(localeFr);
 
 @NgModule({
   declarations: [
     AppComponent,
     MonPremierComponent,
-    AppareilComponent
+    AppareilComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
