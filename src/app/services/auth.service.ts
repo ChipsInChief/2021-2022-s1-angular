@@ -1,5 +1,3 @@
-import { resolveSrv } from "dns";
-
 export class AuthService {
     isAuth = false;
 

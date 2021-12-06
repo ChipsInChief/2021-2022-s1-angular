@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  constructor() { }
+  authStatus: boolean = false;
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.authStatus = this.authService.isAuth;
   }
 
+  onSignOut(){
+    this.authService.signOut();
+    this.authStatus = this.authService.isAuth;
+  }
 }
