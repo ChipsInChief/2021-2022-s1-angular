@@ -1,13 +1,13 @@
 export class AppareilService {
     appareils = [
         {
-          id: 1, name: 'Machine à laver', status: 'éteint'
+          id: 101, name: 'Machine à laver', status: 'éteint'
         },
         {
-          id: 2, name: 'Four', status: 'allumé'
+          id: 23, name: 'Four', status: 'allumé'
         },
         {
-          id: 3, name: 'Ordinateur', status: 'éteint'  
+          id: 3330, name: 'Ordinateur', status: 'éteint'  
         }
       ]
     switchOnAll() {

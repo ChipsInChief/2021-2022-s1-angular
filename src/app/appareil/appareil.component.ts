@@ -13,6 +13,7 @@ export class AppareilComponent implements OnInit {
   // appareilName: string ='Blender';
   @Input() appareilStatus: string = 'éteint';
   @Input() idAppareil: number = -1;
+  @Input() id?: number;
 
   constructor(private appareilService: AppareilService) { }
 
